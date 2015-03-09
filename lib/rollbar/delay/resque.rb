@@ -4,7 +4,7 @@ module Rollbar
   module Delay
     class Resque
       def self.call(payload)
-        new.call(payload)
+        new.call(payload.to_json)
       end
 
       def call(payload)
